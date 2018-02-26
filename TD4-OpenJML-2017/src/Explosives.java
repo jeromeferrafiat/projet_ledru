@@ -38,6 +38,15 @@ public class Explosives{
       @              || (!(assign[j][1]).equals(incomp[k][1])))));
       @*/
 
+      /*@ public invariant // Prop 8
+      @ (\forall int i; 0 <= i &&  i < nb_assign; 
+      @     (\forall int j; 0 <= j && j < nb_assign; 
+      @           i != j && (( assign[i][0] != assign[j][0] ) 
+      @             || ( assign[i][1] != assign[j][1] ));
+      @*/
+
+      
+
 
   //@ requires nb_inc < 48;  
   public void add_incomp(String prod1, String prod2)

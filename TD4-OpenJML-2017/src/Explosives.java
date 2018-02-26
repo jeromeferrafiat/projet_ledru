@@ -39,18 +39,23 @@ public class Explosives{
       @*/
 
 
-    public void add_incomp(String prod1, String prod2){
-	incomp[nb_inc][0] = prod1;
-	incomp[nb_inc][1] = prod2;
-	incomp[nb_inc+1][1] = prod1;
-	incomp[nb_inc+1][0] = prod2;
-	nb_inc = nb_inc+2;
-     }
-    public void add_assign(String bat, String prod){
-	assign[nb_assign][0] = bat;
-	assign[nb_assign][1] = prod;
-	nb_assign = nb_assign+1;
-    }
+  //@ requires nb_inc < 48;  
+  public void add_incomp(String prod1, String prod2)
+  {
+	 incomp[nb_inc][0] = prod1;
+	 incomp[nb_inc][1] = prod2;
+	 incomp[nb_inc+1][1] = prod1;
+	 incomp[nb_inc+1][0] = prod2;
+	 nb_inc = nb_inc+2;
+  }
+  
+  //@ requires nb_assign < 29;
+  public void add_assign(String bat, String prod)
+  {
+	 assign[nb_assign][0] = bat;
+	 assign[nb_assign][1] = prod;
+	 nb_assign = nb_assign+1;
+  }
     public void skip(){
     }
 }

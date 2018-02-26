@@ -138,5 +138,19 @@ public class TestExplosivesJUnit4 {
 				handleJMLAssertionError(e);		
 		}  
 	}
-
+	
+	//test de prop9
+	@Test
+	public void testprop9(){
+		try{
+			e=new Explosives();
+			e.add_assign("Bat_1","Prod_Dyna");
+			e.add_assign("Bat_2","Prod_Dyna");
+			e.add_assign("Bat_3","Prod_Dyna");
+			e.add_assign("Bat_4","Prod_Dyna");
+			e.add_assign("Bat_1","Prod_Glycerine");
+		} 	catch(JmlAssertionError e){
+				handleJMLAssertionError(e);		
+		}  
+	}
 }
